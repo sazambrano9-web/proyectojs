@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduccion a JavaScript</title>
+    <link rel="stylesheet" href="./public/css/global.css">
+
+</head>
+<body>
+    <h1>Ejercicios Básicos en JavaScript</h1>
+    <p>Presiona un botón y observa la consola del navegador (F12).</p>
+
+    <button onclick="cargarScript('public/js/edadCategoria.js')">Actividad 1: Clasificación por Edad</button>
+    <button onclick="cargarScript('public/js/tablaMultiplicar.js')">Actividad 2: Tabla de Multiplicar</button>
+    <button onclick="cargarScript('public/js/tablasSeleccionadas.js')">Actividad 3: Tablas Pares/Impares</button>
+
+    <script>
+        // Función para cargar y ejecutar un script JS externo
+        function cargarScript(nombreArchivo) {
+            const script = document.createElement('script');
+            script.src = nombreArchivo;
+            script.onload = () => console.log(`${nombreArchivo} cargado correctamente.`);
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
